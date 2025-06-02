@@ -20,6 +20,11 @@ html, body {
     box-sizing: border-box;
 }
 
+/* Scroll suave para melhorar a experiência */
+html {
+    scroll-behavior: smooth;
+}
+
 /* ================= HEADER ================= */
 header {
     position: fixed;
@@ -42,13 +47,15 @@ header {
 }
 
 /* ================= MENU ================= */
+
 .menu {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 10px;
+    list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 20px 0;
+    justify-content: center;
 }
 
 .menu li {
@@ -70,8 +77,7 @@ header {
 
 /* Espaço para o header fixo */
 main {
-    padding-top: 120px;
-    
+    padding-top: 180px;
 }
 
 /* ================= TITULOS ================= */
@@ -87,8 +93,9 @@ h2 {
 
 /* ================= LISTA DE BANDEIRAS ================= */
 .bandeiras {
-    display: inline;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2em;
     justify-content: center;
     padding: 2em;
@@ -96,8 +103,37 @@ h2 {
 
 .bandeiras li {
     list-style: none;
-    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+/* Estilo para destacar o título quando clicado */
+.bandeiras h2 {
+    padding: 15px;
+    margin: 20px 0 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: var(--creme);
+    border-left: 4px solid transparent;
+    font-family: var(--delicious);
+    font-weight: 200;
+    color: var(--roxo);
+    width: 100%;
+    max-width: 642px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* Estilo quando a bandeira é selecionada via âncora */
+.bandeiras h2:target {
+    background-color: var(--rosa);
+    border-left: 6px solid var(--azul);
+    color: var(--creme);
+    font-weight: 200;
+    box-shadow: 0 6px 20px rgba(8, 41, 94, 0.4);
+    transform: scale(1.05);
+    scroll-margin-top: 200px; /* Garante que o título apareça abaixo do header */
 }
 
 /* ================= BANDEIRA POLÔNIA ================= */
@@ -161,18 +197,15 @@ h2 {
     align-items: center;
 }
 
-.japao_vermelho 
-{
+.japao_vermelho {
     background-color: #BC002D;
     width: 240px;
     height: 240px;
     border-radius: 50%;
 }
 
-
 /* ================= BANDEIRA SUÉCIA ================= */
-.suecia
-{
+.suecia {
     position: relative;
     border: 1px solid black;
     width: 642px;
@@ -180,8 +213,7 @@ h2 {
     background-color: #005293;
 }
 
-.suecia_amarelo_x
-{
+.suecia_amarelo_x {
     position: absolute;
     width: 100%;
     height: 80px;
@@ -189,8 +221,7 @@ h2 {
     top: 160px;
 }
 
-.suecia_amarelo_y
-{
+.suecia_amarelo_y {
     position: absolute;
     width: 80px;
     height: 100%;
@@ -199,20 +230,16 @@ h2 {
 }
 
 /* ================= BANDEIRA TRINITAD E TOBAGO ================= */
-.tobago
-{
-
+.tobago {
     border: 1px solid black;
     width: 642px;
     height: 400px;
     background-color: black;
     display: flex;
     position: relative;
-
 }
 
-.tobago_branco1, .tobago_branco2
-{
+.tobago_branco1, .tobago_branco2 {
     height: 100%;
     width: 478.3744238px;
     background-color: white;
@@ -220,15 +247,12 @@ h2 {
     position: absolute
 }
 
-.tobago_branco2
-{
+.tobago_branco2 {
     transform: rotate(900deg);
     margin-left: 164px;
-    
 }
 
-.tobago_vermelho1, .tobago_vermelho2
-{
+.tobago_vermelho1, .tobago_vermelho2 {
     height: 100%;
     background-color: #DA1A35;
     width: 445.6493086px;
@@ -236,39 +260,30 @@ h2 {
     clip-path: polygon(0 0, 0 0, 445.6493086px 400px, 0 400px);
 }
 
-.tobago_vermelho2
-{
+.tobago_vermelho2 {
     transform: rotate(900deg);
     margin-left: 197px;
-
 }
 
 /* ================= BANDEIRA GUINE BISSAU ================= */
-.guine
-{
-
+.guine {
     border: 1px solid black;
     width: 642px;
     height: 400px;
     background-color: #009E49;
     display: flex;
-   
-
 }
 
-.guine_vermelho
-{
+.guine_vermelho {
     background-color: #CE1126;
     width: 214px;
     height: 100%;
     display: flex;
     justify-items: center;
     align-items: center;
-
 }
 
-.guine_amarelo
-{
+.guine_amarelo {
     background-color: #FCD116;
     width: 428px;
     height: 50%;
@@ -285,9 +300,7 @@ h2 {
 }
 
 /* ================= BANDEIRA KUWAIT ================= */
-.kuwait
-{
-
+.kuwait {
     border: 1px solid black;
     width: 642px;
     height: 400px;
@@ -297,26 +310,22 @@ h2 {
     align-content: space-between;
 }
 
-.kuwait_preto
-{
+.kuwait_preto {
     height: 100%;
     width: 25%;
     clip-path: polygon(0% 0%, 100% 33.334%, 100% 66.667%, 0% 100%);
     background-color: black;
     position: absolute;
-    
 }
 
-.kuwait_verde
-{
+.kuwait_verde {
     background-color: #007A3D;
     width: 100%;
     height: 33.334%;
     position: absolute;
 }
 
-.kuwait_vermelho
-{
+.kuwait_vermelho {
     background-color: #CE1126;
     width: 100%;
     height: 33.334%;
@@ -339,19 +348,15 @@ h2 {
     display: flex;
 }
 
-.grecia_caixa
-{
+.grecia_caixa {
     height: 222px;
     width: 222px;
     background-color: #004C98;
     display: flex;
     position: relative;
-    
-    
 }
 
-.grecia_branco_x
-{
+.grecia_branco_x {
     background-color: white;
     height: 42.9px;
     width: 100%;
@@ -359,8 +364,7 @@ h2 {
     top: 40%;
 }
 
-.grecia_branco_y
-{
+.grecia_branco_y {
     background-color: white;
     width: 42.8px;
     height: 100%;
@@ -370,8 +374,7 @@ h2 {
 
 /* ================= BANDEIRA BRASIL ================= */
 
-.brasil 
-{
+.brasil {
     border: 1px solid black;
     width: 642px;
     height: 400px;
@@ -380,11 +383,9 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center
-    
 }
 
-.brasil_amarelo
-{
+.brasil_amarelo {
     background-color: #ffcb00;
     width: 552.12px;
     height: 310.12px;
@@ -395,20 +396,16 @@ h2 {
     justify-content: center;
 }
 
-.brasil_azul
-{
-   
+.brasil_azul {
     width: 224.7px;
     height: 224.7px;
     background-color: #002776;
     clip-path: circle(112.35px at 50% 50%);
     position: relative;
     overflow: hidden;
-    
 }
 
-.brasil_faixa 
-{
+.brasil_faixa {
     width: 300px;
     height: 20px;
     background-color: white;
@@ -417,4 +414,91 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(23deg);
+}
+
+/* ================= BANDEIRA MACEDÔNIA ================= */
+
+.macedonia {
+    border: 1px solid black;
+    width: 642px;
+    height: 400px;
+    background-color:#CE2028 ;
+    position: relative;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.macedonia_amarelo_qDA, .macedonia_amarelo_qEA {
+    width: 642px;
+    height: 400px;
+    background-color:#F9D616;
+    clip-path: polygon(0 0, 15% 0, 321px 200px);    
+    position: absolute;
+}
+
+.macedonia_amarelo_qEA {
+    width: 642px;
+    height: 400px;
+    background-color:#F9D616;
+    clip-path: polygon(100% 0, 85% 0, 321px 200px);    
+    position: absolute;
+}
+
+.macedonia_amarelo_qDB {
+    width: 642px;
+    height: 400px;
+    background-color:#F9D616;
+    clip-path: polygon(0 100%, 15% 100%, 321px 200px);    
+    position: absolute;
+}
+
+.macedonia_amarelo_qEB {
+    width: 642px;
+    height: 400px;
+    background-color:#F9D616;
+    clip-path: polygon(100% 100%, 85% 100%, 321px 200px);    
+    position: absolute;
+}
+
+.macedonia_amarelo_alto {
+    width: 642px;
+    height: 400px;
+    background-color:#F9D616;
+    clip-path: polygon(45% 0, 55% 0, 321px 150px);    
+    position: absolute;
+}
+
+.macedonia_amarelo_baixo {
+    width: 642px;
+    height: 400px;
+    background-color:#F9D616;
+    clip-path: polygon(45% 100%, 55% 100%, 321px 250px);    
+    position: absolute;
+}
+
+.macedonia_amarelo_esquerda {
+    width: 642px;
+    height: 400px;
+    background-color:#F9D616;
+    clip-path: polygon(0 40%, 0 60%, 321px 200px);    
+    position: absolute;
+}
+
+.macedonia_amarelo_direita {
+    width: 642px;
+    height: 400px;
+    background-color:#F9D616;
+    clip-path: polygon(100% 40%, 100% 60%, 321px 200px);    
+    position: absolute;
+}
+
+.macedonia_centro {
+    width: 120px;
+    height: 120px;
+    background-color: #F9D616;
+    position: absolute;
+    align-self: center;
+    border-radius: 50%;
+    border: solid 15px #CE2028;
 }
