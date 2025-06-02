@@ -199,26 +199,222 @@ h2 {
 }
 
 /* ================= BANDEIRA TRINITAD E TOBAGO ================= */
-/*.trinidad
+.tobago
 {
-    
+
     border: 1px solid black;
     width: 642px;
     height: 400px;
     background-color: black;
-    
-  
+    display: flex;
+    position: relative;
 
 }
 
-.trinidad_vermelho
+.tobago_branco1, .tobago_branco2
 {
+    height: 100%;
+    width: 478.3744238px;
+    background-color: white;
+    clip-path: polygon(0 0, 32.72511524px 0 , 478.3744238px 400px, 0 400px);
+    position: absolute
+}
+
+.tobago_branco2
+{
+    transform: rotate(900deg);
+    margin-left: 164px;
+    
+}
+
+.tobago_vermelho1, .tobago_vermelho2
+{
+    height: 100%;
+    background-color: #DA1A35;
+    width: 445.6493086px;
+    position: absolute;
+    clip-path: polygon(0 0, 0 0, 445.6493086px 400px, 0 400px);
+}
+
+.tobago_vermelho2
+{
+    transform: rotate(900deg);
+    margin-left: 197px;
+
+}
+
+/* ================= BANDEIRA GUINE BISSAU ================= */
+.guine
+{
+
+    border: 1px solid black;
     width: 642px;
     height: 400px;
-    background-color: #ff0000;
-    clip-path: polygon(0% 0%, 0% 100%, 69.41578% 100%);*/
+    background-color: #009E49;
+    display: flex;
+   
+
+}
+
+.guine_vermelho
+{
+    background-color: #CE1126;
+    width: 214px;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.guine_amarelo
+{
+    background-color: #FCD116;
+    width: 428px;
+    height: 50%;
+}
+
+.guine_estrela {
+    width: 100px;
+    height: 100px;
+    background: black;
+    clip-path: path('M50 0 L61 35 H98 L68 57 L79 91 L50 70 L21 91 L32 57 L2 35 H39 Z');
+    transform: scale(1.2);
+    transform-origin: center;
+    margin: 50px auto;
+}
+
+/* ================= BANDEIRA KUWAIT ================= */
+.kuwait
+{
+
+    border: 1px solid black;
+    width: 642px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    align-content: space-between;
+}
+
+.kuwait_preto
+{
+    height: 100%;
+    width: 25%;
+    clip-path: polygon(0% 0%, 100% 33.334%, 100% 66.667%, 0% 100%);
+    background-color: black;
+    position: absolute;
     
 }
 
+.kuwait_verde
+{
+    background-color: #007A3D;
+    width: 100%;
+    height: 33.334%;
+    position: absolute;
+}
 
+.kuwait_vermelho
+{
+    background-color: #CE1126;
+    width: 100%;
+    height: 33.334%;
+    margin-top: 41.6%;
+    position: absolute;
+}
 
+/* ================= BANDEIRA GRÉCIA ================= */
+.grecia {
+    border: 1px solid black;
+    width: 642px;
+    height: 400px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #004C98,
+        #004C98 44.4444px,
+        white 44.4444px,
+        white 88.88px
+    );
+    display: flex;
+}
+
+.grecia_caixa
+{
+    height: 222px;
+    width: 222px;
+    background-color: #004C98;
+    display: flex;
+    position: relative;
+    
+    
+}
+
+.grecia_branco_x
+{
+    background-color: white;
+    height: 42.9px;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+}
+
+.grecia_branco_y
+{
+    background-color: white;
+    width: 42.8px;
+    height: 100%;
+    position: absolute;
+    left: 40%;
+}
+
+/* ================= BANDEIRA BRASIL ================= */
+
+.brasil 
+{
+    border: 1px solid black;
+    width: 642px;
+    height: 400px;
+    background-color: #009440;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    
+}
+
+.brasil_amarelo
+{
+    background-color: #ffcb00;
+    width: 552.12px;
+    height: 310.12px;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);    
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.brasil_azul
+{
+   
+    width: 224.7px;
+    height: 224.7px;
+    background-color: #002776;
+    clip-path: circle(112.35px at 50% 50%);
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.brasil_faixa 
+{
+    width: 300px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50% / 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(23deg);
+}
