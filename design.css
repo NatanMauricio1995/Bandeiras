@@ -71,6 +71,7 @@ header {
 /* Espaço para o header fixo */
 main {
     padding-top: 120px;
+    
 }
 
 /* ================= TITULOS ================= */
@@ -86,7 +87,7 @@ h2 {
 
 /* ================= LISTA DE BANDEIRAS ================= */
 .bandeiras {
-    display: flex;
+    display: inline;
     flex-wrap: wrap;
     gap: 2em;
     justify-content: center;
@@ -95,6 +96,8 @@ h2 {
 
 .bandeiras li {
     list-style: none;
+    justify-self: center;
+
 }
 
 /* ================= BANDEIRA POLÔNIA ================= */
@@ -170,7 +173,7 @@ h2 {
 /* ================= BANDEIRA SUÉCIA ================= */
 .suecia
 {
-    display: flex;
+    position: relative;
     border: 1px solid black;
     width: 642px;
     height: 400px;
@@ -179,15 +182,43 @@ h2 {
 
 .suecia_amarelo_x
 {
-    width: 642px;
+    position: absolute;
+    width: 100%;
     height: 80px;
     background-color: #FECB00;
-    margin-top:160px;
+    top: 160px;
 }
 
 .suecia_amarelo_y
 {
+    position: absolute;
     width: 80px;
-    height: 400px;
+    height: 100%;
     background-color: #FECB00;
+    left: 160px;
 }
+
+/* ================= BANDEIRA TRINITAD E TOBAGO ================= */
+/*.trinidad
+{
+    
+    border: 1px solid black;
+    width: 642px;
+    height: 400px;
+    background-color: black;
+    
+  
+
+}
+
+.trinidad_vermelho
+{
+    width: 642px;
+    height: 400px;
+    background-color: #ff0000;
+    clip-path: polygon(0% 0%, 0% 100%, 69.41578% 100%);*/
+    
+}
+
+
+
